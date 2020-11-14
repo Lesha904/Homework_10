@@ -1,0 +1,278 @@
+@mixin text-position {
+    font-size: 60px;
+    color: #0e1a35;
+    font-weight: 250;
+    font-family: "Roboto";
+    display: flex;
+    justify-content: center;
+}
+.text{
+    @include text-position;
+}
+
+@mixin sentence-position {
+    height: 69px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #8492af;
+    font-weight: 400;
+    font-family: "Roboto";
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 65px;
+}
+.sentence{
+    @include sentence-position;
+}
+
+@mixin button {
+    outline: 0;
+    cursor: pointer;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Roboto";
+    width: 204px;
+    height: 48px;
+    border-radius: 24px;
+    border: 0;
+    background-color: #5584ff;
+}
+button{
+     @include button;
+}
+
+@mixin lines-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 50px;
+}
+.lines-wrapper{
+    @include lines-wrapper;
+}
+
+@mixin line-left {
+    align-self: center;
+    width: 226px;
+    height: 1px;
+    background-color: #c1c8d47c;
+    margin-right: 25px;
+}
+.line-left{
+    @include line-left;
+}
+
+@mixin line-right {
+    align-self: center;
+    width: 226px;
+    height: 1px;
+    background-color: #c1c8d47c;
+    margin-left: 25px;
+}
+.line-right{
+    @include line-right;
+}
+
+@mixin grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    grid-auto-rows: 422px;
+    column-gap: 75px;
+    justify-content: center;
+    padding-top: 70px;
+}
+.grid-container{
+    @include grid-container;
+}
+
+@mixin name {
+    font-size: 24px;
+    letter-spacing: 0px;
+    line-height: 36px;
+    color: #0e1a35;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+.name{
+    @include name;
+}
+
+@mixin cost {
+    display: flex;
+    flex-direction: row;
+}
+.cost{
+    @include cost;
+}
+
+@mixin dollar {
+    font-size: 40px;
+    letter-spacing: 1px;
+    line-height: 65px;
+    color: #0e1a35;
+    font-weight: 700;
+    font-family: "Roboto";
+}
+.dollar{
+    @include dollar;
+}
+
+@mixin number {
+    font-size: 72px;
+    letter-spacing: 1px;
+    line-height: 46px;
+    color: #0e1a35;
+    font-weight: 700;
+    font-family: "Roboto";
+}
+.number{
+    @include number;
+}
+
+@mixin month {
+    font-size: 24px;
+    line-height: 76px;
+    color: #8492af;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+.month{
+    @include month;
+}
+
+@mixin grid-item {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     align-items: center;
+     background-color: #ffffff;
+     box-shadow: 0 0 21px 12px rgb(233, 226, 226);
+ }
+ .grid-item{
+     @include grid-item;
+ }
+
+@mixin proposed {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 18px;
+    letter-spacing: 0px;
+    line-height: 36px;
+    color: #8492af;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+.proposed{
+    @include proposed;
+}
+
+@mixin symbol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.symbol{
+    @include symbol;
+}
+
+@mixin lorem {
+    padding-left: 10px;
+}
+.lorem{
+    @include lorem;
+}
+
+//  $primery-color: red;                      
+//  $alternative-color: yellow;
+
+// div{
+//     color: $primery-color;
+//     background-color: $alternative-color;
+// }
+
+//                                             пример Вложенности
+// nav{
+//     ul{
+//         background-color: red;
+//     }
+//     li{
+//         color: yellow;
+//     }
+// }
+
+// div{                                      этот синтаксис громоздкий
+//     color: red;
+// }
+// div:hover{
+//     color: green;
+// }
+
+// @import"reset-src";
+//     div{            
+//         color: red;
+//         &:hover{
+//             color: green;
+//         }
+//     }
+                                          
+// @mixin position-center {                       Миксин
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%,-50% );
+// }
+// div{
+//     width: 100px;
+//     height: 100px;
+//     @include position-center;
+// }
+// p{
+//     @include position-center;
+// }
+// .box{
+//     @include position-center;
+// }
+// @mixin position-center($top, $left){             миксин с Параметрами
+//     position: absolute;
+//     top: $top;
+//     left: $left;
+//     transform: translate(-50%,-50% );
+// }
+// div{
+//     width: 100px;
+//     height: 100px;
+//     @include position-center(50%, 50%);
+// }
+// p{
+//     @include position-center(10%, 20%);
+// }
+// .box{
+//     @include position-center(30%, 60%);
+// }
+
+// @function make-greener($value){                         Функция
+//     @return $value + rgb(0, 50, 0);
+// }
+// @function make-bigger($value){
+//     @return $value * 2;
+// }
+
+// p{
+//     background-color:make-greener(grey);
+//     width: make-bigger(200);
+// }
+
+// @for $i from 1 through 12 {                             Цикл @FOR
+//     .col-lg-#{i}{
+//         width: percentage($i/12);
+//     }
+// }
+
+// @each $name in 'save' 'cancel' 'help' {                 Цикл @EACH
+//     .box-#{$name}{
+//         background: red;
+//     }
+// }
